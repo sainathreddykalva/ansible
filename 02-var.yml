@@ -38,3 +38,11 @@
     - name: Print variable
       debug:
         msg: URL == {{ URL }}
+
+##ansible -i inv all -k -m setup
+- name: Print fact
+  hosts: all
+  tasks:
+    - name: print fact
+      debug:
+        msg: Python Version = {{ ansible_python_version }}
