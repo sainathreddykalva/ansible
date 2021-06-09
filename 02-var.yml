@@ -4,5 +4,5 @@
     URL: play.example.com
   tasks:
     - name: Print Variable
-    debug:
-    msg: URL = {{ URL }}
+      debug:
+        msg: URL = {{ URL }}
