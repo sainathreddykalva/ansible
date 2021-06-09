@@ -11,11 +11,12 @@
         URL: task.example.com
       debug:
         msg: URL + {{ URL }}
-  - name: Deomo on Variable From file
-    hosts: all
-    vars_files:
-      - example-vars.yml
-    tasks:
-      - name: print variable
-        debug:
-          msg: URL == {{ URL }}
+
+- name: Deomo on Variable From file
+  hosts: all
+  vars_files:
+    - example-vars.yml
+  tasks:
+    - name: print variable
+      debug:
+        msg: URL == {{ URL }}
