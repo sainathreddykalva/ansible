@@ -57,3 +57,11 @@
     - name: Print out
       debug:
         msg: No Of users connected = {{ out.stdout }}
+
+    - name: Declare a Variable
+      set_fact:
+      NO_OF_USERS: "{{ out.stdout }}"
+
+    - name: Print No of users from a new var
+      debug:
+        msg: "{{ NO_OF_USERS }}"
