@@ -12,15 +12,6 @@
       debug:
         msg: URL + {{ URL }}
 
-- name: Deomo on Variable From file
-  hosts: all
-  vars_files:
-    - example-vars.yml
-  tasks:
-    - name: print variable
-      debug:
-        msg: URL == {{ URL }}
-
 - name: Demo on URL from user input
   hosts: all
   vars_prompt:
@@ -29,6 +20,15 @@
       private: false
   tasks:
     - name: Print Variable
+      debug:
+        msg: URL == {{ URL }}
+
+- name: Deomo on Variable From file
+  hosts: all
+  vars_files:
+    - example-vars.yml
+  tasks:
+    - name: print variable
       debug:
         msg: URL == {{ URL }}
 
