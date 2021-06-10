@@ -52,6 +52,7 @@
   tasks:
     - name: Grab how mant users are logged in
       shell: who | wc -l
+      register: out
 
     - name: Print out
       debug:
