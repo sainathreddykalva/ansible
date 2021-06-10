@@ -46,3 +46,13 @@
     - name: print fact
       debug:
         msg: Python Version = {{ ansible_python_version }}
+
+          - name: Register a Variable
+            hosts: all
+            tasks:
+              - name: Grab how mant users are logged in
+                shell: who | wc -l
+
+              - name: Print Out
+                debug:
+                  msg: Output = {{ out }}
