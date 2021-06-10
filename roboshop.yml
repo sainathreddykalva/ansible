@@ -1,0 +1,5 @@
+- name: setup roboshop project
+  hosts: all
+  roles:
+    - name: Load frontend role
+      role: Front
