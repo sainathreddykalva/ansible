@@ -53,6 +53,6 @@
     - name: Grab how mant users are logged in
       shell: who | wc -l
 
-    - name: Print Out
+    - name: Print out
       debug:
         msg: Output = {{ out }}
