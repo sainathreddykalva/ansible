@@ -56,4 +56,4 @@
 
     - name: Print out
       debug:
-        msg: Output = {{ out }}
+        msg: No Of users connected = {{ out.stdout }}
