@@ -60,7 +60,7 @@
 
     - name: Declare a Variable
       set_fact:
-      NO_OF_USERS: "{{ out.stdout }}"
+        NO_OF_USERS: "{{ out.stdout }}"
 
     - name: Print No of users from a new var
       debug:
