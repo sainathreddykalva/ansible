@@ -3,12 +3,6 @@
     name: nginx
     state: present
 
-- name: start nginx service
-  ansible.builtin.systemd:
-    state: started
-    name: nginx
-    enabled: yes
-
 - name: Remove old htdocs directory
   ansible.builtin.file:
     path: /usr/share/nginx/html
@@ -30,5 +24,11 @@
   copy:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
+
+- name: start nginx service
+  ansible.builtin.systemd:
+    state: restarted
+    name: nginx
+    enabled: yes
 
 
