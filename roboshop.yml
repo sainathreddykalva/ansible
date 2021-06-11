@@ -2,4 +2,4 @@
   hosts: FRONTEND
   roles:
     - name: Load frontend role
-      roles: frontend
+      role: frontend
