@@ -1,0 +1,24 @@
+
+##for below output  type follow the command  for i in frontend mongodb catalogue redis user
+##cart mysql shipping rabbitmq payment ;
+##do echo -e "[$(echo $i | tr [a-z] [A-Z])]\n$i.roboshop.internal" ;done
+[FRONTEND]
+frontend.roboshop.internal
+[MONGODB]
+mongodb.roboshop.internal
+[CATALOGUE]
+catalogue.roboshop.internal
+[REDIS]
+redis.roboshop.internal
+[USER]
+user.roboshop.internal
+[CART]
+cart.roboshop.internal
+[MYSQL]
+mysql.roboshop.internal
+[SHIPPING]
+shipping.roboshop.internal
+[RABBITMQ]
+rabbitmq.roboshop.internal
+[PAYMENT]
+payment.roboshop.internal
