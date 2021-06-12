@@ -24,3 +24,30 @@
   roles:
     - name: Load Catalogue Role
       role: catalogue
+
+- name: Setup roboshop project -- redis Component
+  hosts: REDIS
+  become: yes
+  tags:
+    - redis
+  roles:
+    - name: Load redis Role
+      role: redis
+
+- name: Setup roboshop project -- user Component
+  hosts: USER
+  become: yes
+  tags:
+    - user
+  roles:
+    - name: Load user Role
+      role: user
+
+- name: Setup roboshop project -- cart Component
+  hosts: CART
+  become: yes
+  tags:
+    - cart
+  roles:
+    - name: Load cart Role
+      role: cart
