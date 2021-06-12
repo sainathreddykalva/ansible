@@ -15,8 +15,8 @@
 
 - name: demo on tags
   hosts: localhost
-   tags:
-     - AWS
+  tags:
+    - AWS
   tasks:
     - name: Print AWS
       debug:
@@ -24,8 +24,8 @@
 
 - name: demo on tags
   hosts: localhost
-   tags:
-     - AZURE
+  tags:
+    - AZURE
   tasks:
     - name: Print AZURE
       debug:
