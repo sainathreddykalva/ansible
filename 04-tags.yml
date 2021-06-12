@@ -1,0 +1,9 @@
+- name: demo on tags
+  hosts: localhosts
+    - name: Print AWS
+      debug:
+        msg: AWS
+
+    - name: Print AZUR
+      debug:
+        msg: AZUR
