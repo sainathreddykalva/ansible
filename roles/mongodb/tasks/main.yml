@@ -17,7 +17,7 @@
   systemd:
     name: monod
     enabled: yes
-    state: restarted
+    state: started
 
 - name: Update mongod listen address
   ansible.builtin.replace:
