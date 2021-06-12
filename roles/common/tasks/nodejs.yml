@@ -6,10 +6,10 @@
       - gcc-c++
     state: installed
 
-- name: Add Roboshop User
+- name: Add RoboShop User
   ansible.builtin.user:
     name: roboshop
-    comment: Roboshop Project user
+    comment: RoboShop Project User
 
 - name: Download Package
   include_role:
@@ -26,13 +26,12 @@
     remote_src: yes
   become_user: roboshop
 
-- name: Instal Nodjs dependencies
+- name: Download NodeJS Dependencies
   community.general.npm:
     path: /home/roboshop/{{COMPONENT}}
-    state: latest
   become_user: roboshop
 
-- name: Copy systemd file
+- name: Copy SystemD file
   copy:
     src: systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
