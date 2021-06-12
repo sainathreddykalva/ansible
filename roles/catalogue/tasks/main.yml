@@ -31,3 +31,16 @@
     path: /home/roboshop/catalogue
     state: latest
   become_user: roboshop
+
+- name: Copy systemd file
+  copy:
+    src: systemd.service
+    dest: /etc/systemd/system/catalogue.service
+
+- name: Start catalogue Service
+  systemd:
+    name: catalogue
+    state: restarted
+    enabled: yes
+    daemon_reload: yes
+
