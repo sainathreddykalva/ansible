@@ -39,7 +39,7 @@
 
 - name: Start {{COMPONENT}} Service
   systemd:
-    name: catalogue
+    name: {{COMPONENT}}
     state: restarted
     enabled: yes
     daemon_reload: yes
