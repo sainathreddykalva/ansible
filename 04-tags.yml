@@ -4,7 +4,11 @@
     - name: Print AWS
       debug:
         msg: AWS
+      tags:
+        - AWS
 
-    - name: Print AZUR
+    - name: Print AZURE
       debug:
-        msg: AZUR
+        msg: AZURE
+      tags:
+        - AZURE
