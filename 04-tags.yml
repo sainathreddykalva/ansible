@@ -1,5 +1,5 @@
 - name: demo on tags
-  hosts: localhosts
+  hosts: localhost
   tasks:
     - name: Print AWS
       debug:
