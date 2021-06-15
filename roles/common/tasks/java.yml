@@ -1,4 +1,4 @@
-- name: Install NodeJS
+- name: Install java
   yum:
     name:
       - maven
@@ -32,9 +32,8 @@
 
 - name: Copy SystemD file
   copy:
-    src: systemd.service
+    src: D:\sainath\IdeaProjects\ansible\roles\shipping\file\systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
-    remote_src: yes
 
 - name: Start {{COMPONENT}} Service
   systemd:
