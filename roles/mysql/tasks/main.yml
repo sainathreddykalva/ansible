@@ -16,7 +16,7 @@
 - name: Install MySql Server
   yum:
     name: mysql-community-server
-    state: absent
+    state: present
 
 - name: Start MySql Service
   systemd:
