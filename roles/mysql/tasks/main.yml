@@ -13,7 +13,7 @@
 
 - name: Install MySql Server
   yum:
-    name: mysql=community-server
+    name: mysql-community-server
     state: present
 
 - name: Start MySql Service
