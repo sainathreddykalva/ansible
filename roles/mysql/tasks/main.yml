@@ -16,21 +16,21 @@
 - name: Install MySql Server
   yum:
     name: mysql-community-server
-    state: present
+    state: absent
 
-- name: Start MySql Service
-  systemd:
-    name: mysqld
-    state: started
-    enabled: yes
-
-- name: Grabing Default Password
-  shell: grep "A temporary password" /var/log/mysqld.log | awk '{print $NF}'
-  register: MYSQL_DEFAULT_PASSWORD
-
-- name: debug
-  debug:
-    msg: "{{MYSQL_DEFAULT_PASSWORD}}"
+#- name: Start MySql Service
+#  systemd:
+#    name: mysqld
+#    state: started
+#    enabled: yes
+#
+#- name: Grabing Default Password
+#  shell: grep "A temporary password" /var/log/mysqld.log | awk '{print $NF}'
+#  register: MYSQL_DEFAULT_PASSWORD
+#
+#- name: debug
+#  debug:
+#    msg: "{{MYSQL_DEFAULT_PASSWORD}}"
 
 #- name: Check the MySQL Login
 #  community.mysql.mysql_query:
