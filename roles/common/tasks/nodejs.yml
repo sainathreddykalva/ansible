@@ -23,7 +23,7 @@
   copy:
     src: /tmp/{{COMPONENT}}-main/
     dest: /home/roboshop/{{COMPONENT}}/
-#    remote_src: yes
+    remote_src: yes
   become_user: roboshop
 
 - name: Download NodeJS Dependencies
