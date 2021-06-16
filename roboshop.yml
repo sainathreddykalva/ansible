@@ -77,7 +77,7 @@
   tags:
     - rabbitmq
   roles:
-    - name: Load RabbitMQ Role
+    - name: Load rabbitmq Role
       role: rabbitmq
 
 - name: Setup roboshop project -- Payment Component
