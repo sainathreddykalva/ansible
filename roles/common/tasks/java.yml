@@ -1,4 +1,4 @@
-- name: Install java
+- name: Install NodeJS
   yum:
     name:
       - maven
