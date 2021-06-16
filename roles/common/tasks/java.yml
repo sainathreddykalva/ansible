@@ -32,10 +32,10 @@
 
 - name: Copy SystemD file
   copy:
-    src: /shipping/files/systemd.service
+    src: systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
 
-- name: Start {{COMPONENT}} Servicxe
+- name: Start {{COMPONENT}} Service
   systemd:
     name: "{{COMPONENT}}"
     state: restarted
