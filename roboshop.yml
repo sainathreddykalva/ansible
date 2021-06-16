@@ -74,7 +74,7 @@
   hosts: RABBITMQ
   become: yes
   tags:
-    - rabitmq
+    - rabbitmq
   roles:
     - name: Load rabbitmq Role
       role: rabbitmq
