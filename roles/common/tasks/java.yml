@@ -32,7 +32,7 @@
 
 - name: Copy SystemD file
   copy:
-    src: D:\sainath\IdeaProjects\ansible\roles\shipping\file\systemd.service
+    src: systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
 
 - name: Start {{COMPONENT}} Service
