@@ -69,3 +69,21 @@
   roles:
     - name: Load shipping Role
       role: shipping
+
+- name: Setup roboshop project -- rabitmq Component
+  hosts: RABBITMQ
+  become: yes
+  tags:
+    - rabitmq
+  roles:
+    - name: Load rabbitmq Role
+      role: rabbitmq
+
+- name: Setup roboshop project -- payment Component
+  hosts: PAYMENT
+  become: yes
+  tags:
+    - payment
+  roles:
+    - name: Load payment Role
+      role: payment
