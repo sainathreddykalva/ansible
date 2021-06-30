@@ -6,7 +6,7 @@ filebeat.inputs:
 
 {% if IS_STRUCTURED %}
 output.elasticsearch:
-    hosts: ["172.31.71.89:9200"]
+  hosts: ["172.31.71.89:9200"]
 {% endif %}
 
 {% if not IS_STRUCTURED %}
