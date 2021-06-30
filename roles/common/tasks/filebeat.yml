@@ -18,7 +18,7 @@
     state: latest
 
 - name: Update Filebeat Configuration
-  template:
+  templates:
     src: filebeat.yml.j2
     dest: /etc/filebeat/filebeat.yml
 
