@@ -25,4 +25,4 @@
 - name: Restart file beat
   systemd:
     name: filebeat
-    state: restart
+    state: restarted
