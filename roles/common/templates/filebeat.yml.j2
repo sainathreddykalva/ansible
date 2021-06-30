@@ -10,8 +10,8 @@ output.elasticsearch:
 {% endif %}
 
 {% if not IS_STRUCTURED %}
-#output.logstash:
-  #hosts: ["172.31.71.89:5044"]
+output.logstash:
+  hosts: ["172.31.71.89:5044"]
 {% endif %}
 
 filebeat.config.modules:
