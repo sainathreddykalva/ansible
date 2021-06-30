@@ -18,11 +18,11 @@
     state: latest
 
 - name: Update Filebeat Configuration
-  templates:
+  template:
     src: filebeat.yml.j2
     dest: /etc/filebeat/filebeat.yml
 
-- name: Restart file beat
+- name: Restart Filebeat
   systemd:
     name: filebeat
     state: restarted
