@@ -3,14 +3,14 @@
     state: present
     key: https://packages.elastic.co/GPG-KEY-elasticsearch
 
-- name: Setuo YUM repository
+- name: Setup YUM repository
   yum_repository:
-  name: filebeat
-  description: filebeat
-  baseurl: https://artifacts.elastic.co/packages/7.x/yum
-  gpgcheck: true
-  gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
-  enabled: true
+    name: filebeat
+    description: filebeat
+    baseurl: https://artifacts.elastic.co/packages/7.x/yum
+    gpgcheck: true
+    gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    enabled: true
 
 - name: Install Filebeat
   yum:
