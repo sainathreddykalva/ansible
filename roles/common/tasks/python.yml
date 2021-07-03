@@ -1,7 +1,7 @@
 - name: Install Python
   yum:
     name:
-      - python36
+      - python38
       - gcc
       - python3-devel
     state: installed
