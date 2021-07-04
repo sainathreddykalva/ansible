@@ -2,7 +2,7 @@ filebeat.inputs:
   - type: log
     enabled: true
     paths:
-      - /var/log/{{COMPONENT}}.log
+      - {{FILENAME}}
 
 {% if IS_STRUCTURED %}
 output.elasticsearch:
