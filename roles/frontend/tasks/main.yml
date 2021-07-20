@@ -17,16 +17,23 @@
     dest: /usr/share/nginx/html/
     remote_src: yes
 
-- name: Copy nginx roboshop config
+- name: Copy Nginx RoboShop Config
   copy:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
+  when: ENV is not defined
 
-#- name: start nginx service
-#  ansible.builtin.systemd:
-#    state: restarted
-#    name: nginx
-#    enabled: yes
+- name: Update Nginx RoboShop Config
+  template:
+    src: roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf
+  when: ENV is defined
+
+- name: start nginx service
+  ansible.builtin.systemd:
+    state: restarted
+    name: nginx
+    enabled: yes
 
 - name: Setup Filebeat
   include_role:
