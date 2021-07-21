@@ -34,6 +34,13 @@
   copy:
     src: systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
+  when: ENV is not defined
+
+- name: Update SystemD file
+  template:
+    src: systemd.service
+    dest: /etc/systemd/system/{{COMPONENT}}.service
+  when: ENV is defined
 
 - name: Start {{COMPONENT}} Service
   systemd:
